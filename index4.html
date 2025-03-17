@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>4Ps of Innovation Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; 
+      padding: 0;
+      background: #f7f7f7;
+      color: #333;
+    }
+    header, footer {
+      background: #bf1e2e; 
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    main {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .hidden {
+      display: none;
+    }
+    h1, h2 {
+      margin-top: 0;
+    }
+    .question-container {
+      margin: 1rem 0;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: #fafafa;
+    }
+    .answers {
+      list-style-type: none;
+      padding: 0;
+    }
+    .answers li {
+      margin: 0.5rem 0;
+    }
+    button {
+      background: #bf1e2e;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 1rem;
+      margin: 0.5rem;
+    }
+    button:hover {
+      background: #9b1926;
+    }
+    .feedback {
+      margin-top: 0.5rem;
+      font-weight: bold;
+    }
+    .highlight {
+      background: #fffae6;
+      padding: 0.25rem;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>4Ps of Innovation Challenge</h1>
+  </header>
+
+  <main>
+    <!-- Intro Page -->
+    <section id="intro-page">
+      <h2>Introduction</h2>
+      <p>
+        Welcome to the <strong>4Ps of Innovation Challenge</strong>. In this game, you will learn about the four dimensions of innovation identified by Bessant and Tidd (2013): 
+        <strong>Product, Process, Position, and Paradigm</strong>.
+      </p>
+      <p>
+        <strong>Product Innovation</strong> focuses on creating or significantly improving products or services. 
+        <strong>Process Innovation</strong> looks at new ways of producing or delivering these offerings. 
+        <strong>Position Innovation</strong> involves changing how a product or service is perceived or marketed, while 
+        <strong>Paradigm Innovation</strong> means shifting the underlying business model or assumptions.
+      </p>
+      <p>
+        We will also distinguish between <strong>Incremental</strong> (small-scale) and <strong>Radical</strong> (major) changes in each area. 
+        For example, adding a new flavour to an existing pastry line is incremental, while adopting 3D-printed pastries might be radical.
+      </p>
+      <p class="highlight">
+        <strong>Scoring:</strong> +2 points for each correct answer, -1 point for each incorrect answer. There are 16 questions total, so the highest possible score is 32.
+      </p>
+      <p>
+        There is no time limit. Read each question carefully, select your answer, and click "Check Answers" on each page before moving on.
+      </p>
+      <button onclick="goToPage('product-page')">Start Game</button>
+    </section>
+
+    <!-- Product Innovation Page -->
+    <section id="product-page" class="hidden">
+      <h2>Product Innovation</h2>
+      <form id="product-form">
+        <!-- Q1 -->
+        <div class="question-container">
+          <p><strong>Q1:</strong> Which of the following best describes product innovation?</p>
+          <ul class="answers">
+            <li>
+              <label>
+                <input type="radio" name="productQ1" value="A">
+                Introducing or enhancing product features or services.
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="productQ1" value="B">
+                Changing the way a product is manufactured.
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="productQ1" value="C">
+                Targeting a new customer segment.
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="productQ1" value="D">
+                Transforming the entire business model.
+              </label>
+            </li>
+          </ul>
+          <div id="productQ1-feedback" class="feedback"></div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="question-container">
+          <p><strong>Q2:</strong> Our bakery decides to introduce a new range of vegan pastries to cater to health-conscious customers. Which type of innovation is this?</p>
+          <ul class="answers">
+            <li>
+              <label>
+                <input type="radio" name="productQ2" value="A">
+                Process Innovation
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="productQ2" value="B">
+                Position Innovation
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="productQ2" value="C">
+                Product Innovation
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="productQ2" value="D">
+                Paradigm Innovation
+              </label>
+            </li>
+          </ul>
+          <div id="productQ2-feedback" class="feedback"></div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="question-container">
+          <p><strong>Q3:</strong> If the bakery simply alters the ingredients of an existing pastry line to include gluten-free options without changing equipment or the overall business model, is this an incremental or radical product innovation?</p>
+          <ul class="answers">
+            <li>
+              <label>
+                <input type="radio" name="productQ3" value="A">
+                Incremental Innovation
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="productQ3" value="B">
+                Radical Innovation
+              </label>
+            </li>
+          </ul>
+          <div id="productQ3-feedback" class="feedback"></div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="question-container">
+          <p><strong>Q4:</strong> Which scenario represents a more radical product innovation for the bakery?</p>
+          <ul class="answers">
+            <li>
+              <label>
+                <input type="radio" name="productQ4" value="A">
+                Adding a new cookie flavour to an existing range.
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="productQ4" value="B">
+                Developing 3D-printed pastries that can be customised in real-time.
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="productQ4" value="C">
+                Slightly reducing sugar content in current recipes.
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="productQ4" value="D">
+                Changing the packaging design.
+              </label>
+            </li>
+          </ul>
+          <div id="productQ4-feedback" class="feedback"></div>
+        </div>
+      </form>
+      <button onclick="checkProductAnswers()">Check Answers</button>
+      <button onclick="goToPage('process-page')" style="margin-left: 1rem;">Next</button>
+    </section>
+
+    <!-- Process Innovation Page -->
+    <section id="process-page" class="hidden">
+      <h2>Process Innovation</h2>
+      <form id="process-form">
+        <!-- Q1 -->
+        <div class="question-container">
+          <p><strong>Q1:</strong> Which of the following best describes process innovation?</p>
+          <ul class="answers">
+            <li>
+              <label><input type="radio" name="processQ1" value="A"> Introducing or enhancing the production or delivery methods.</label>
+            </li>
+            <li>
+              <label><input type="radio" name="processQ1" value="B"> Modifying the brand image to target new demographics.</label>
+            </li>
+            <li>
+              <label><input type="radio" name="processQ1" value="C"> Developing entirely new products.</label>
+            </li>
+            <li>
+              <label><input type="radio" name="processQ1" value="D"> Switching to a subscription-based model.</label>
+            </li>
+          </ul>
+          <div id="processQ1-feedback" class="feedback"></div>
+        </div>
+        <!-- Q2 -->
+        <div class="question-container">
+          <p><strong>Q2:</strong> The bakery installs an advanced oven that bakes twice as fast, reducing energy costs and improving efficiency. What kind of innovation is this?</p>
+          <ul class="answers">
+            <li><label><input type="radio" name="processQ2" value="A"> Product Innovation</label></li>
+            <li><label><input type="radio" name="processQ2" value="B"> Process Innovation</label></li>
+            <li><label><input type="radio" name="processQ2" value="C"> Position Innovation</label></li>
+            <li><label><input type="radio" name="processQ2" value="D"> Paradigm Innovation</label></li>
+          </ul>
+          <div id="processQ2-feedback" class="feedback"></div>
+        </div>
+        <!-- Q3 -->
+        <div class="question-container">
+          <p><strong>Q3:</strong> Implementing an automated dough-mixing machine to replace manual mixing would be considered:</p>
+          <ul class="answers">
+            <li><label><input type="radio" name="processQ3" value="A"> Incremental Process Innovation</label></li>
+            <li><label><input type="radio" name="processQ3" value="B"> Radical Process Innovation</label></li>
+            <li><label><input type="radio" name="processQ3" value="C"> Neither, it’s a marketing change.</label></li>
+            <li><label><input type="radio" name="processQ3" value="D"> It depends on the degree of transformation in the overall process.</label></li>
+          </ul>
+          <div id="processQ3-feedback" class="feedback"></div>
+        </div>
+        <!-- Q4 -->
+        <div class="question-container">
+          <p><strong>Q4:</strong> Which scenario indicates a radical process innovation?</p>
+          <ul class="answers">
+            <li><label><input type="radio" name="processQ4" value="A"> Using a slightly faster oven.</label></li>
+            <li><label><input type="radio" name="processQ4" value="B"> Introducing new packaging materials.</label></li>
+            <li><label><input type="radio" name="processQ4" value="C"> Installing fully robotic systems that handle mixing, baking, and packaging.</label></li>
+            <li><label><input type="radio" name="processQ4" value="D"> Offering a loyalty card.</label></li>
+          </ul>
+          <div id="processQ4-feedback" class="feedback"></div>
+        </div>
+      </form>
+      <button onclick="checkProcessAnswers()">Check Answers</button>
+      <button onclick="goToPage('position-page')" style="margin-left: 1rem;">Next</button>
+    </section>
+
+    <!-- Position Innovation Page -->
+    <section id="position-page" class="hidden">
+      <h2>Position Innovation</h2>
+      <form id="position-form">
+        <!-- Q1 -->
+        <div class="question-container">
+          <p><strong>Q1:</strong> Position innovation primarily involves:</p>
+          <ul class="answers">
+            <li><label><input type="radio" name="positionQ1" value="A"> Altering the perceived value, branding, or target segment.</label></li>
+            <li><label><input type="radio" name="positionQ1" value="B"> Replacing all staff with robots.</label></li>
+            <li><label><input type="radio" name="positionQ1" value="C"> Launching a new product line.</label></li>
+            <li><label><input type="radio" name="positionQ1" value="D"> Shifting to a subscription-based model.</label></li>
+          </ul>
+          <div id="positionQ1-feedback" class="feedback"></div>
+        </div>
+        <!-- Q2 -->
+        <div class="question-container">
+          <p><strong>Q2:</strong> The bakery rebrands itself as a “luxury artisan bakery” targeting premium customers instead of local budget shoppers. Which type of innovation is this?</p>
+          <ul class="answers">
+            <li><label><input type="radio" name="positionQ2" value="A"> Product Innovation</label></li>
+            <li><label><input type="radio" name="positionQ2" value="B"> Position Innovation</label></li>
+            <li><label><input type="radio" name="positionQ2" value="C"> Process Innovation</label></li>
+            <li><label><input type="radio" name="positionQ2" value="D"> Paradigm Innovation</label></li>
+          </ul>
+          <div id="positionQ2-feedback" class="feedback"></div>
+        </div>
+        <!-- Q3 -->
+        <div class="question-container">
+          <p><strong>Q3:</strong> Is repositioning a product from “budget-friendly” to “luxury artisanal” typically an incremental or radical position innovation?</p>
+          <ul class="answers">
+            <li><label><input type="radio" name="positionQ3" value="A"> Incremental</label></li>
+            <li><label><input type="radio" name="positionQ3" value="B"> Radical</label></li>
+          </ul>
+          <div id="positionQ3-feedback" class="feedback"></div>
+        </div>
+        <!-- Q4 -->
+        <div class="question-container">
+          <p><strong>Q4:</strong> Which of the following changes is more likely an incremental position innovation?</p>
+          <ul class="answers">
+            <li><label><input type="radio" name="positionQ4" value="A"> Expanding the marketing campaign to include social media influencers while retaining the core brand identity.</label></li>
+            <li><label><input type="radio" name="positionQ4" value="B"> Changing from a standard bakery to an entirely vegan brand.</label></li>
+            <li><label><input type="radio" name="positionQ4" value="C"> Developing an entirely new product range.</label></li>
+            <li><label><input type="radio" name="positionQ4" value="D"> Automating the baking process.</label></li>
+          </ul>
+          <div id="positionQ4-feedback" class="feedback"></div>
+        </div>
+      </form>
+      <button onclick="checkPositionAnswers()">Check Answers</button>
+      <button onclick="goToPage('paradigm-page')" style="margin-left: 1rem;">Next</button>
+    </section>
+
+    <!-- Paradigm Innovation Page -->
+    <section id="paradigm-page" class="hidden">
+      <h2>Paradigm Innovation</h2>
+      <form id="paradigm-form">
+        <!-- Q1 -->
+        <div class="question-container">
+          <p><strong>Q1:</strong> Which of the following best defines paradigm innovation?</p>
+          <ul class="answers">
+            <li><label><input type="radio" name="paradigmQ1" value="A"> A fundamental shift in the entire business model.</label></li>
+            <li><label><input type="radio" name="paradigmQ1" value="B"> Launching a new product line.</label></li>
+            <li><label><input type="radio" name="paradigmQ1" value="C"> Slightly improving existing manufacturing methods.</label></li>
+            <li><label><input type="radio" name="paradigmQ1" value="D"> Rebranding a product for a different segment.</label></li>
+          </ul>
+          <div id="paradigmQ1-feedback" class="feedback"></div>
+        </div>
+        <!-- Q2 -->
+        <div class="question-container">
+          <p><strong>Q2:</strong> The bakery moves from a traditional storefront to a subscription-only model delivering weekly boxes to subscribers. Which innovation is this?</p>
+          <ul class="answers">
+            <li><label><input type="radio" name="paradigmQ2" value="A"> Product Innovation</label></li>
+            <li><label><input type="radio" name="paradigmQ2" value="B"> Process Innovation</label></li>
+            <li><label><input type="radio" name="paradigmQ2" value="C"> Position Innovation</label></li>
+            <li><label><input type="radio" name="paradigmQ2" value="D"> Paradigm Innovation</label></li>
+          </ul>
+          <div id="paradigmQ2-feedback" class="feedback"></div>
+        </div>
+        <!-- Q3 -->
+        <div class="question-container">
+          <p><strong>Q3:</strong> If the bakery integrates fully with local farms, shares resources, and operates as a co-operative, significantly altering its ownership and profit-sharing structure, this would be considered:</p>
+          <ul class="answers">
+            <li><label><input type="radio" name="paradigmQ3" value="A"> Incremental Paradigm Innovation</label></li>
+            <li><label><input type="radio" name="paradigmQ3" value="B"> Radical Paradigm Innovation</label></li>
+            <li><label><input type="radio" name="paradigmQ3" value="C"> Product Innovation</label></li>
+            <li><label><input type="radio" name="paradigmQ3" value="D"> Process Innovation</label></li>
+          </ul>
+          <div id="paradigmQ3-feedback" class="feedback"></div>
+        </div>
+        <!-- Q4 -->
+        <div class="question-container">
+          <p><strong>Q4:</strong> Which of the following changes is more incremental than radical from a paradigm perspective?</p>
+          <ul class="answers">
+            <li><label><input type="radio" name="paradigmQ4" value="A"> Shifting from a traditional bakery to an entirely online, subscription-based model.</label></li>
+            <li><label><input type="radio" name="paradigmQ4" value="B"> Offering a small membership program for loyal customers.</label></li>
+            <li><label><input type="radio" name="paradigmQ4" value="C"> Partnering with a large supermarket chain to become a wholesale supplier only.</label></li>
+            <li><label><input type="radio" name="paradigmQ4" value="D"> Adding a new coffee machine.</label></li>
+          </ul>
+          <div id="paradigmQ4-feedback" class="feedback"></div>
+        </div>
+      </form>
+      <button onclick="checkParadigmAnswers()">Check Answers</button>
+      <button onclick="goToPage('final-page')" style="margin-left: 1rem;">Finish</button>
+    </section>
+
+    <!-- Final Score Page -->
+    <section id="final-page" class="hidden">
+      <h2>Game Over!</h2>
+      <p>Your final score is: <span id="final-score"></span> out of 32</p>
+      <p>Thank you for playing and learning about the 4Ps of Innovation!</p>
+      <button onclick="restartGame()">Play Again</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Innovation Challenge</p>
+  </footer>
+
+  <script>
+    // Global score
+    let score = 0;
+
+    // Page Navigation
+    function goToPage(pageId) {
+      // Hide all sections
+      const sections = document.querySelectorAll('main section');
+      sections.forEach(section => section.classList.add('hidden'));
+
+      // Show target section
+      document.getElementById(pageId).classList.remove('hidden');
+
+      // If final page, display the score
+      if (pageId === 'final-page') {
+        document.getElementById('final-score').textContent = score;
+      }
+    }
+
+    // Helper to check radio answers
+    //   questionMap is an object: { inputName: { correctValue: "X", feedbackId: "someId" }, ... }
+    //   For each question, we see if user’s answer is correct or not
+    //   +2 for correct, -1 for incorrect
+    function checkAnswers(questionMap) {
+      for (let key in questionMap) {
+        const radios = document.getElementsByName(key);
+        let chosen = null;
+        radios.forEach(radio => {
+          if (radio.checked) {
+            chosen = radio.value;
+          }
+        });
+        const feedbackEl = document.getElementById(questionMap[key].feedbackId);
+
+        if (!chosen) {
+          feedbackEl.textContent = "No answer selected. 0 points.";
+          feedbackEl.style.color = "blue";
+        } else if (chosen === questionMap[key].correctValue) {
+          score += 2;
+          feedbackEl.textContent = "Correct! +2 points.";
+          feedbackEl.style.color = "green";
+        } else {
+          score -= 1;
+          feedbackEl.textContent = "Incorrect. -1 point.";
+          feedbackEl.style.color = "red";
+        }
+      }
+    }
+
+    // PRODUCT PAGE
+    function checkProductAnswers() {
+      const productQuestions = {
+        "productQ1": { correctValue: "A", feedbackId: "productQ1-feedback" },
+        "productQ2": { correctValue: "C", feedbackId: "productQ2-feedback" },
+        "productQ3": { correctValue: "A", feedbackId: "productQ3-feedback" },
+        "productQ4": { correctValue: "B", feedbackId: "productQ4-feedback" }
+      };
+      checkAnswers(productQuestions);
+    }
+
+    // PROCESS PAGE
+    function checkProcessAnswers() {
+      const processQuestions = {
+        "processQ1": { correctValue: "A", feedbackId: "processQ1-feedback" },
+        "processQ2": { correctValue: "B", feedbackId: "processQ2-feedback" },
+        "processQ3": { correctValue: "D", feedbackId: "processQ3-feedback" },
+        "processQ4": { correctValue: "C", feedbackId: "processQ4-feedback" }
+      };
+      checkAnswers(processQuestions);
+    }
+
+    // POSITION PAGE
+    function checkPositionAnswers() {
+      const positionQuestions = {
+        "positionQ1": { correctValue: "A", feedbackId: "positionQ1-feedback" },
+        "positionQ2": { correctValue: "B", feedbackId: "positionQ2-feedback" },
+        "positionQ3": { correctValue: "B", feedbackId: "positionQ3-feedback" },
+        "positionQ4": { correctValue: "A", feedbackId: "positionQ4-feedback" }
+      };
+      checkAnswers(positionQuestions);
+    }
+
+    // PARADIGM PAGE
+    function checkParadigmAnswers() {
+      const paradigmQuestions = {
+        "paradigmQ1": { correctValue: "A", feedbackId: "paradigmQ1-feedback" },
+        "paradigmQ2": { correctValue: "D", feedbackId: "paradigmQ2-feedback" },
+        "paradigmQ3": { correctValue: "B", feedbackId: "paradigmQ3-feedback" },
+        "paradigmQ4": { correctValue: "B", feedbackId: "paradigmQ4-feedback" }
+      };
+      checkAnswers(paradigmQuestions);
+    }
+
+    // Restart the game
+    function restartGame() {
+      score = 0;
+      // Reset radio buttons and feedback
+      const allRadios = document.querySelectorAll('input[type="radio"]');
+      allRadios.forEach(radio => {
+        radio.checked = false;
+      });
+      const feedbacks = document.querySelectorAll('.feedback');
+      feedbacks.forEach(fb => fb.textContent = '');
+
+      goToPage('intro-page');
+    }
+  </script>
+</body>
+</html>
